@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4 sm:p-6 md:p-8">
+        <h1 class="text-3xl font-semibold text-blue-600 text-center mb-6">Online Store</h1>
+
+        <div id="search-container" class="mb-4">
+            <input type="text" id="product-search" placeholder="Search products..." />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8" id="product-list">
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Cart</h2>
+            <div id="cart-items" class="mb-4">
+            </div>
+            <p class="text-lg font-semibold text-gray-800">Total: <span id="total" class="text-green-600">$0</span></p>
+            <div class="mt-4">
+                <label for="delivery-type" class="block text-gray-700 font-semibold">Delivery Type:</label>
+                <select id="delivery-type" class="w-full p-2 border rounded-md" onchange="updateTotal()">
+                    <option value="0">Slow (Free)</option>
+                    <option value="4">Fast (+₹4)</option>
+                    <option value="8">Instant (+₹8)</option>
+                </select>
+            </div>            
+            <div class="mt-6">
+                <button onclick="shareCart()"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline w-full">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+
+</html>
